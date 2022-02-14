@@ -5,8 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
-
+// 14,252 KB	 128ms
 public class 블랙잭 {
+    // 전역변수 선언
     static int [] arr;
     static int N,M,ans=0;
     public static void main(String[] args) throws IOException {
@@ -17,16 +18,18 @@ public class 블랙잭 {
         M = Integer.parseInt(st.nextToken());
         arr = new int[N];
         arr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        // 3개 뽑기 완전탐색
         for(int i=0;i<N;i++)
             bruteForce(arr[i],i+1,1);
+        // 결과 출력
         System.out.println(ans);
     }
-    private static void bruteForce(int sum, int i,int cnt){
-        if(cnt==3 && sum<=M) { // Array index의 끝이면 Stop
+    private static void bruteForce(int sum, int i,int cnt){ // 선택값 합,선택 번호 ,선택갯수
+        if(cnt==3 && sum<=M) { // 3개 모두선택, 값이 안넘었으면 결과저장
             ans = Math.max(ans, sum);
             return;
         }
-        if(i>=N || cnt==3) return;
+        if(i==N || cnt==3) return;  // 3개 선택끝, 배열 끝번호인 경우 종료
         for(;i<N;i++)
             bruteForce(sum+arr[i],i+1,cnt+1);
     }
