@@ -7,7 +7,7 @@ public class 영화감독숌 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int cnt = 0,i=0;
-        while(cnt<n){
+        while(cnt<n){ // bruteforce
             i++;
             if(Integer.toString(i).contains("666"))
                 cnt++;
