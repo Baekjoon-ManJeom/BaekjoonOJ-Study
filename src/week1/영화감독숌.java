@@ -1,7 +1,7 @@
 package week1;
 
 import java.util.Scanner;
-// 87780kb	364ms
+// 87780kb	364 ms
 public class 영화감독숌 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
