@@ -2,11 +2,10 @@ package 브루트포스;
 
 import java.util.Scanner;
 
-
 /**
+ * 결과
  *메모리 : 17740KB
  *시간: 220ms
- *
  * */
 public class 블랙잭 {
     public static void main(String[] args) {
