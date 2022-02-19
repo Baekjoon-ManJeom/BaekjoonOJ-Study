@@ -3,6 +3,7 @@ import java.util.Scanner;
 /**
 * 메모리: 89524KB
  * 시간: 404ms
+ * 
 * */
 public class 영화감독숨 {
     public static void main(String[] args) {
