@@ -13,5 +13,6 @@ public class 영화감독숌 {
                 cnt++;
         }
         System.out.println(i);
+        sc.close();
     }
 }
