@@ -1,6 +1,6 @@
  # BaekjoonOJ-Study
 백준만점 스터디 (백준 온라인 저지 알고리즘 문제 풀이) 
-+ [week2](src/week2) - [정렬](https://www.acmicpc.net/step/9)
++ [week2](src/week2) - [정렬 문제보기](https://www.acmicpc.net/step/9)
   + ✅ 1    2750    수 정렬하기 1
   + ✅ 2    2751    수 정렬하기 2
   + ✅ 3    10989    수 정렬하기 3
