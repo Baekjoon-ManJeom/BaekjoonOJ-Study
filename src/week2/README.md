@@ -28,7 +28,7 @@
 Comparable, Comparator의 인터페이스를 구현하는 방법을 익히고 익숙해지는것이 중요하다.
 
 
-### [문제 목록](https://www.acmicpc.net/step/9)
+### 4. [문제 목록](https://www.acmicpc.net/step/9)
 
 + ✅ 1	2750	 수 정렬하기
 + ✅ 2	2751	 수 정렬하기 2
