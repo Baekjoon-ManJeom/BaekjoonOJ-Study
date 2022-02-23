@@ -27,7 +27,7 @@ public class boj_10989 {
 
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < cntArr.length; i++) {
+        for (int i = 1; i < cntArr.length; i++) {
             while (cntArr[i]-- > 0) {
                 sb.append(i).append(System.lineSeparator());
             }
