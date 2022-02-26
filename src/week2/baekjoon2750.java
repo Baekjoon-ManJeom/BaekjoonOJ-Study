@@ -2,7 +2,7 @@ package week2;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class backjoon2750 {
+public class baekjoon2750 {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -11,10 +11,28 @@ public class backjoon2750 {
 		for(int i = 0; i<n ; i++) {
 			t[i]=in.nextInt();
 		}
-
+/*
+ * Arrays.sort()함수와 시간 복잡도 O(n^2) 인 정렬 알고리즘으로 모두 풀어보았다.
+ * 결과 -> 메모리와 시간차가 거의 비슷하다.
+ * 
+ * */
+		
+		
+		/*
+		 메모리 : 22164 KB
+		 시간 : 348 ms
+		 */
+		
 		/*1. 정렬 함수 사용*/
-		//		Arrays.sort(t);
+		
+//				Arrays.sort(t);
 
+		
+		/*
+		 메모리 : 22164 KB
+		 시간 : 348 ms
+		 */
+		
 		/*2. 선택 정렬 */
 //		int min = t[0];
 //		for(int i =0;i<n-1; i++) {		// 1번 인덱스부터 다른 인덱스와 비교하며 최솟값 바꾼다.
@@ -29,6 +47,12 @@ public class backjoon2750 {
 //			}
 //		}		
 //		}
+		
+		/*
+		 메모리 : 22360 KB
+		 시간 : 356 ms
+		 */
+		
 		/* 3. 삽입 정렬 */
 		
 //		for(int i =1;i<n; i++) {		
@@ -43,7 +67,13 @@ public class backjoon2750 {
 //			t[j+1] = tg;		// while을 탈출했을때 j는 0이거나, 타겟보다 작다는 의미이다.
 //								// 따라서 타겟은 j+1번째에 와야한다.
 //		}
-	
+
+		
+		/*
+		 메모리 : 22232 KB
+		 시간 : 352 ms
+		 */
+		
 		/* 4. 버블 정렬 */
 		for(int j = n; j>1; j--) {
 			for(int i =0;i<n-1; i++) {	
