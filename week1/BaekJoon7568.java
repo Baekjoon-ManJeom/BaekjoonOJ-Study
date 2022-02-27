@@ -1,4 +1,3 @@
-package src.java.week1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -26,7 +25,7 @@ public class BaekJoon7568 {
 
                 if(j != k) {
                     if (arrays[j][0] > arrays[k][0]) {
-                        point = point+1;
+                         point = point+1;
                     }
                     if (arrays[j][1] > arrays[k][1]) {
                         point = point+1;
