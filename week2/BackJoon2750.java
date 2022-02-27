@@ -1,27 +1,30 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Scanner;
 import java.util.TreeSet;
 
 public class BackJoon2750 {
 
     public static void main(String args[]) throws Exception{
 
-        Scanner scanner = new Scanner(System.in);
-        TreeSet<Integer> tree = new TreeSet<Integer>();
-        int count = scanner.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        TreeSet<Integer> tree = new TreeSet<Integer>();
+        int count = Integer.parseInt(br.readLine());
+
+        StringBuilder sb = new StringBuilder();
         for(int i = 0; i < count ; i++) {
-            tree.add(scanner.nextInt());
+            tree.add(Integer.parseInt(br.readLine()));
         }
 
         Iterator<Integer> test = tree.iterator();
         for(int j = 0 ; j < tree.size() ; j++ ){
-            System.out.println(test.next());
+            sb.append(test.next() + "\n");
         }
+        System.out.println(sb.toString());
 
-
-        scanner.close();
+        br.close();
     }
 
 }
