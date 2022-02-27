@@ -2,6 +2,9 @@ package week2;
 
 import java.util.Scanner;
 
+/* 병합 정렬 알고리즘
+   시간 초과남.. */
+
 public class MergeSort {
 
 	public static void main(String[] args) {
