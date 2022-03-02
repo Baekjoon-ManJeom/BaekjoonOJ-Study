@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
  */
 
 
-public class Baekjoon14888 {
+public class baekjoon14888 {
 	
 	public static int[] Operator; //입력받을 연산자 배열
 	public static int[] Operand;	 // 피 연산 값 배열

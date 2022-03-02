@@ -22,7 +22,7 @@ public class baekjoon10989 {
  
         int N = Integer.parseInt(br.readLine());
         int []t = new int[N];
-        int []count = new int [10000001];
+        int []count = new int [10001];
         for(int i = 0; i<N; i++) {
         	t[i] = Integer.parseInt(br.readLine());
         }
