@@ -13,16 +13,16 @@ public class N과M1 {
         m = sc.nextInt();
         sc.close();
         // 조합 출력
-        Boolean chosen[] = new Boolean[n+1];
+        Boolean[] chosen = new Boolean[n+1];
         Arrays.fill(chosen,false);
         for (int i = 1; i <= n; i++) {
             chosen[i] = true;
-            combi(chosen,1,i+"");
+            comb(chosen,1,i+"");
             chosen[i] = false;
         }
     }
     // 조합 출력  (선택값체크배열,
-    public static void combi(Boolean[] chosen, int depth, String str){
+    public static void comb(Boolean[] chosen, int depth, String str){
         if(m == depth){
             System.out.println(str);
         }
@@ -30,7 +30,7 @@ public class N과M1 {
             for (int i = 1; i <=n ; i++) {
                 if(!chosen[i]){
                     chosen[i] = true;
-                    combi(chosen,depth+1,str+" "+i);
+                    comb(chosen,depth+1,str+" "+i);
                     chosen[i] = false;
                 }
             }
