@@ -18,7 +18,7 @@ public class 스도쿠 {
              arr[i] = tmp;
         }
         br.close();
-        // 백트래킹
+        // 함수 시작
         sudoku(0,0);
 
     }
