@@ -7,7 +7,7 @@ public class N과M1 {
     // 중복 가능한 조합을 만드는 문제
     static int n,m;
     public static void main(String[] args) {
-        // 입력
+        // 입력123
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         m = sc.nextInt();
