@@ -18,7 +18,7 @@ public class 스도쿠 {
              arr[i] = tmp;
         }
         br.close();
-        // 함수 시작
+        // 함수
         sudoku(0,0);
 
     }
