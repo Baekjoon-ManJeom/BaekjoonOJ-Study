@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-
+// 시간 초과
 public class 스타드와링크 {
     static int N,ans=100;
     static int[][] arr;
