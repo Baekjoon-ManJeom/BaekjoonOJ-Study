@@ -7,8 +7,8 @@ public class BackJoon14888 {
     // int max 에 Integer.MAX_VALUE 를 해주는 이유를 체크해보자
     // 저 max 와 min 에 저 선언을 안해주면 오답으로 처리된다.
     static int[] operator = new int[4];
-    static int max = Integer.MAX_VALUE;
-    static int min = Integer.MIN_VALUE;
+    static int max = Integer.MIN_VALUE;
+    static int min = Integer.MAX_VALUE;
     static int[] number;
     static int numberCount;
 
