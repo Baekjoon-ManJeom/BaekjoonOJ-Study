@@ -57,7 +57,7 @@ public class StartLink {
 					start += Smap[i][j];
 					start += Smap[j][i];
 				}
-				//i와 j가 true인 팀일 때 링크팀 점수 계산
+				//i와 j가 false인 팀일 때 링크팀 점수 계산
 				else if (pick[i] == false && pick[j] == false) {
 					link += Smap[i][j];
 					link += Smap[j][i];
