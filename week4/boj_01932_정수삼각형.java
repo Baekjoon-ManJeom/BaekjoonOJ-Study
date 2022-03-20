@@ -51,7 +51,8 @@ public class boj_01932_정수삼각형 {
         if (dp[depth][col] == null) { // 메모이제이션 안되어있는 인덱스 일 경우
 
             // 바로 아래층의 인덱스와 바로 아래층의 오른쪽 인덱스 중 큰 값과 현재 인덱스를 더해줍니다
-            dp[depth][col] = Math.max(getSumTopDown(depth + 1, col), getSumTopDown(depth + 1, col + 1)) + arr[depth][col];
+            dp[depth][col] = Math.max(getSumTopDown(depth + 1, col), getSumTopDown(depth + 1, col + 1))
+                    + arr[depth][col];
         }
 
         // 메모이제이션 되어있다면 현재 인덱스 값 바로 리턴
