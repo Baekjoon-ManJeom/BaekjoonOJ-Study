@@ -18,13 +18,13 @@ public class boj_11399_ATM {
         }
         Arrays.sort(arr);
 
-        int sum = 0;
+        int prevSum = 0;
+        int total = 0;
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < i + 1; j++) {
-                sum += arr[j];
-            }
+        for (int i = 0; i < N; i++) {
+            total += prevSum + arr[i];
+            prevSum += arr[i];
         }
-        System.out.println(sum);
+        System.out.println(total);
     }
 }
