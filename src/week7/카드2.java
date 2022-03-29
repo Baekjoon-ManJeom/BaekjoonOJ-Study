@@ -3,7 +3,7 @@ package week7;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
-
+// 49,024 KB	276 MS
 public class 카드2 {
     public static void main(String[] args) {
         // 입력
