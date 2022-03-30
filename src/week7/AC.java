@@ -10,19 +10,19 @@ public class AC {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
         StringBuilder sb = new StringBuilder();
-        Queue<String> q = new LinkedList<>();
+        Deque<String> deque = new ArrayDeque<>();
         for (int i = 0; i < T; i++) {
             // init
             boolean err = false; // 에러여부 체크
             boolean order = true; // 방향 초기화
-            q.clear();
+            deque.clear();
             // input
             String p = br.readLine(); // p 문자열
             String n = br.readLine(); // 배열 크기 (사용안함)
             StringTokenizer st = new StringTokenizer(br.readLine(), "[],");
             // 준비
             while(st.hasMoreTokens())
-                q.add(st.nextToken());
+                deque.add(st.nextToken());
             // 연산
             for (char c : p.toCharArray()) {
                 if (c == 'R') {
@@ -30,24 +30,27 @@ public class AC {
                     continue;
                 }
                 if (c == 'D') {
-                    if (q.isEmpty()) {
+                    if (deque.isEmpty()) {
                         err = true;
                         break;
                     }
                     if(order)
-                        q.poll();
-                    else q.remove(Integer.toString(q.size()));
+                        deque.poll();
+                    else deque.remove(Integer.toString(deque.size()));
                 }
             }
             // 결과저장
             if(!err) {
                 if (order)
-                    sb.append(q).append("\n");
+                    sb.append(deque).append("\n");
                 else{
-                    // 여기가 시간을 쓰는듯?
-                    List<String> collect = new ArrayList<>(q);
-                    Collections.reverse(collect);
-                    sb.append(collect).append("\n");
+                    sb.append("[");
+                    while (!deque.isEmpty()) {
+                        sb.append(order ? deque.removeFirst() : deque.removeLast());
+                        if (deque.size() != 0)
+                            sb.append(',');
+                    }
+                    sb.append(']').append("\n");
                 }
             }else{
                 sb.append("error\n");
