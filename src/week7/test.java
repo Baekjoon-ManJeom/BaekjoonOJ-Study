@@ -11,12 +11,8 @@ import java.util.Queue;
 
 public class test {
     public static void main(String[] args) throws IOException {
-
+        // 깃 커밋이 왜 안되는거지냐고오오
         Queue<String> q = new LinkedList<>();
-        /*
-        for (int i = 0; i < 10; i++) {
-            q.add(i);
-        }*/
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         q.addAll(Arrays.asList(br.readLine().replaceAll("[^0-9,]", "")));
