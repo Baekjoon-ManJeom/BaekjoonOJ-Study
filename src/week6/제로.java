@@ -21,6 +21,7 @@ public class 제로 {
             sum+= i;
         }
         System.out.println(sum);
+        sc.close();
 
     }
 }
