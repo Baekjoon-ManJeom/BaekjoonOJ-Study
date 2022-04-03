@@ -1,6 +1,11 @@
 # BaekjoonOJ-Study
 백준만점 스터디 (백준 온라인 저지 알고리즘 문제 풀이)  
 
++ week8- [분할정보](https://www.acmicpc.net/step/20)
+  + ✅ 1   2630     색종이 만들기
+  + ✅ 2   1992     쿼드트리
+  + ✅ 3   1780     종이의 개수
+
 + week7- [큐/데크](https://www.acmicpc.net/step/12)
   + ✅ 1    18258  큐2
   + ✅ 2    2164  카드2
