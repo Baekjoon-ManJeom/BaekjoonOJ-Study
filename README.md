@@ -1,6 +1,11 @@
 # BaekjoonOJ-Study
 백준만점 스터디 (백준 온라인 저지 알고리즘 문제 풀이)
 
++ week9- [이분탐색](https://www.acmicpc.net/step/29)
+  + ✅ 1	1920	 수 찾기	성
+  + ✅ 2	10816	 숫자 카드 2 
+  + ✅ 3	1654	 랜선 자르기
+
 + week8- [분할정보](https://www.acmicpc.net/step/20)
   + ✅ 1   2630     색종이 만들기
   + ✅ 2   1992     쿼드트리
