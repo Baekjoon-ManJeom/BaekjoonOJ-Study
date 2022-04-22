@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 
 // 345,836 kb , 1872 ms
+// 319,864 kb , 1036 ms
 public class 종이의개수 {
     static int[][] arr; // input matrix
     static HashMap<Integer, Integer> map = new HashMap<>(); // output map
@@ -37,29 +38,26 @@ public class 종이의개수 {
     }
     static void divide(int row,int col,int size){
         flag = arr[row][col];
-        if(size==1){
+        if(checkNum(row,col,size)){
             map.put(flag,map.get(flag)+1);
             return;
         }
-        for (int i = row; i < row+size; i++) {
-            for (int j = col; j < col+size; j++) {
-                if(flag != arr[i][j]){
-                    int newSize = size/3;
-                    divide(row,col,newSize);
-                    divide(row,col+newSize,newSize);
-                    divide(row,col+(newSize*2),newSize);
-
-                    divide(row+newSize,col,newSize);
-                    divide(row+newSize,col+newSize,newSize);
-                    divide(row+newSize,col+(newSize*2),newSize);
-
-                    divide(row+(2*newSize),col,newSize);
-                    divide(row+(2*newSize),col+newSize,newSize);
-                    divide(row+(2*newSize),col+(newSize*2),newSize);
-                    return;
+        int newSize = size/3;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                divide(row+(newSize*i),col+(newSize*j),size/3);
+            }
+        }
+    }
+    static boolean checkNum(int row, int col, int size){
+        for (int i = row; i < row + size; i++) {
+            for (int j = col; j < col + size; j++) {
+                if (flag != arr[i][j]) {
+                    return false;
                 }
             }
         }
-        map.put(flag,map.get(flag)+1);
+        return true;
+
     }
 }
