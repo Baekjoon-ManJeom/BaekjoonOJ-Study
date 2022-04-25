@@ -24,14 +24,15 @@ public class 랜선자르기 {
         br.close();
     }
     static long upper_bound(int m){
-        long l=0;
+        long l=1; // 0이 아닌 자연수
         long r=arr[arr.length-1]+1; // 0으로 나누는 불상사를 막기 위함
-        long sum, mid;
+        long sum;
+        long mid;
         while(l<r){
             sum=0;
             mid = (l+r)/2;
-            for(int i = 0; i < arr.length; i++) {
-                sum += arr[i]/mid; // 여기때문에 r+1로 탐색 시작
+            for (int j : arr) {
+                sum += j / mid; // 여기때문에 r+1로 탐색 시작
             }
             if(sum<m)
                 r = mid;
