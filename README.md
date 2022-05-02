@@ -1,9 +1,15 @@
 # BaekjoonOJ-Study
 백준만점 스터디 (백준 온라인 저지 알고리즘 문제 풀이)
 
++ week10- [이분탐색](https://www.acmicpc.net/step/13)
+  + ✅ 1    11279     최대 힙
+  + ✅ 2    1927     최소 힙 
+  + ✅ 3    11286     절댓값 힙 
+  + ✅ 4    1655     가운데를 말해요
++ 
 + week9- [이분탐색](https://www.acmicpc.net/step/29)
   + ✅ 1	1920	 수 찾기
-  + ✅ 2	10816	 숫자 카드 2 
+  + ✅ 2	10816	 숫자 카드 2
   + ✅ 3	1654	 랜선 자르기
 
 + week8- [분할정보](https://www.acmicpc.net/step/20)
