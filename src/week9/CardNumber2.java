@@ -25,14 +25,14 @@ public class CardNumber2 {
 		for(int i = 0; i < M; i++) {
 			int key = sc.nextInt();
  
-			sb.append(UpperBound(arr, key) - lowerBound(arr, key)).append(' ');
+			sb.append(UpperBound(arr, key) - LowerBound(arr, key)).append(' ');
 		}
 		System.out.println(sb);
 		
 		sc.close();
 	}
 	
-	private static int lowerBound(int[] arr, int key) {
+	private static int LowerBound(int[] arr, int key) {
 		int lo = 0; 
 		int hi = arr.length; 
  
