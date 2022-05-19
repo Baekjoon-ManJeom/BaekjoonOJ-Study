@@ -4,7 +4,6 @@
 + week11- [동적계획법2](https://www.acmicpc.net/step/17)
   + ✅ 1	11066	파일 합치기
   + ✅ 2	11049	행렬 곱셈 순서
-  + ✅ 3	1520	내리막 길
 
 + week10- [이분탐색](https://www.acmicpc.net/step/13)
   + ✅ 1    11279     최대 힙
