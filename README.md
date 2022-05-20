@@ -1,12 +1,16 @@
 # BaekjoonOJ-Study
 백준만점 스터디 (백준 온라인 저지 알고리즘 문제 풀이)
 
++ week11- [동적계획법2](https://www.acmicpc.net/step/17)
+  + ✅ 1	11066	파일 합치기
+  + ✅ 2	11049	행렬 곱셈 순서
+
 + week10- [이분탐색](https://www.acmicpc.net/step/13)
   + ✅ 1    11279     최대 힙
   + ✅ 2    1927     최소 힙 
   + ✅ 3    11286     절댓값 힙 
   + ✅ 4    1655     가운데를 말해요
-+ 
+
 + week9- [이분탐색](https://www.acmicpc.net/step/29)
   + ✅ 1	1920	 수 찾기
   + ✅ 2	10816	 숫자 카드 2
