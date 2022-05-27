@@ -1,62 +1,43 @@
 package week12;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.io.*;
 import java.util.StringTokenizer;
-
+import java.util.TreeSet;
+//105,344 KB	1,084 MS
 public class dfs1 {
-    static Node[] nodes;
-    static boolean [] visited;
-    static int s;
-    static StringBuilder sb;
+    static TreeSet<Integer>[] nodes;
+    static int[] ans;
+    static int order=1;
     public static void main(String[] args) throws IOException {
+        // input
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
-        s = Integer.parseInt(st.nextToken());
-        nodes = new Node[m];
+        int s = Integer.parseInt(st.nextToken());
+        nodes = new TreeSet[n + 1];
+        ans = new int[n + 1];
+        for (int i = 1; i < nodes.length; i++) nodes[i] = new TreeSet<>();
         for (int i = 0; i < m; i++) {
-             st = new StringTokenizer(br.readLine()," ");
-             nodes[i] = new Node(Integer.parseInt(st.nextToken()),Integer.parseInt(st.nextToken()));
+            st = new StringTokenizer(br.readLine(), " ");
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            nodes[a].add(b);
+            nodes[b].add(a);
         }
+        dfs(s);
+        for (int i = 1; i < ans.length; i++) {
+            bw.write(ans[i]+"\n");
+        }
+        bw.close();
         br.close();
-        Arrays.sort(nodes);
-        sb = new StringBuilder();
-        sb.append(s).append("\n");
-        visited = new boolean[m];
-        dfs();
-        System.out.println(sb);
     }
-    static void dfs(){
-        for (int i = 0; i < nodes.length; i++) {
-            if(s == nodes[i].from){
-                if(visited[i] == false){
-                    visited[i] = true;
-                    sb.append(nodes[i].to).append("\n");
-                    s = nodes[i].to;
-                    dfs();
-                    return;
-                }
-            }
-        }
-        sb.append("0").append("\n");
-
-    }
-    static class Node implements Comparable<Node> {
-        int from;
-        int to;
-        public Node(int from, int to) {
-            this.from = from;
-            this.to = to;
-        }
-        @Override
-        public int compareTo(Node o) {
-            if(from - o.from == 0)
-                return to - o.to;
-            return from - o.from;
+    static void dfs(int cur){
+        ans[cur] = order++;
+        for (int i : nodes[cur]) {
+            if(ans[i] == 0)
+                dfs(i);
         }
     }
 }
